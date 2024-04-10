@@ -1,10 +1,25 @@
 //ROAD MAP DAY 3 TASK NO : 1
 let obj1 = {name:"person 1",age:5};
 let obj2 = {age:5,name:"person 1"};
-let string1 =JSON.stringify(obj1,Object.keys(obj1))
-console.log(string1)
-let string2 =JSON.stringify(obj2,Object.keys(obj2))
-console.log(string2)
+
+
+var flag=true;
+
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1) { 
+        if(obj1[key] == obj2[key]) {
+            continue;
+        }
+        else {
+            flag=false;
+            break;
+        }
+    }
+}
+else {
+    flag=false;
+}
+console.log("is object equal "+flag);
 
 //ROAD MAP DAY 3 TASK NO : 2
 
